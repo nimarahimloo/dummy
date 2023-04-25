@@ -5,14 +5,19 @@ import ZoomSlider from "./ZoomSlider";
 import Image from "../components/Image";
 import React, {useState} from "react";
 
+/**
+ * Home Slider Component
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function HomeSlider() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
     <React.Fragment>
         <Swiper
             style={{
-                "--swiper-navigation-color": "#000",
-                "--swiper-pagination-color": "#000",
+                "--swiper-navigation-color": "#002E6E",
+                "--swiper-pagination-color": "#002E6E",
             }}
             loop
             spaceBetween={10}
@@ -20,14 +25,15 @@ export default function HomeSlider() {
             thumbs={{swiper: thumbsSwiper}}
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2"
+            autoHeight
         >
             <SwiperSlide key={1}>
-                <Box sx={{background: "#D8E8E833", borderRadius: "20px", padding: "50px"}}>
-                    <ZoomSlider/>
+                <Box sx={{borderRadius: "20px"}}>
+                    <ZoomSlider src={window.location.origin + "/assets/img/slide.jpg"} alt="slider" id="slider"/>
                 </Box>
             </SwiperSlide>
             <SwiperSlide key={2}>
-                <Box sx={{background: "#D8E8E833", borderRadius: "20px", padding: "50px"}}>
+                <Box sx={{borderRadius: "20px", padding: "50px"}}>
                     <audio controls>
                         <source
                             src={window.location.origin + "/assets/sound/test.mp3"}
