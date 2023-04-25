@@ -25,10 +25,6 @@ body {
 
 
 @media screen and (max-width: 1200px) {
-    main {
-        width: 100%;
-        padding-top: 8em !important;
-    }
 
     .dropdown {
         margin-right: 0 !important;
@@ -37,10 +33,6 @@ body {
 
 @media (min-width: 1200px) {
     main {
-        padding-top: 40px !important;
-        margin-left: 128px;
-        margin-top: 117px;
-        border-radius: 25px 0 0 0;
         margin-right: 350px;
     }
 
