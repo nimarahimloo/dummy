@@ -40,8 +40,7 @@ export default function AccountPopover() {
                 handleCloseEditProfile();
             }
         } catch (error) {
-            console.error(error);
-            enqueueSnackbar('Unable to logout!', {variant: 'error'});
+            enqueueSnackbar('', {variant: 'error'});
         }
     };
 
@@ -96,15 +95,13 @@ export default function AccountPopover() {
                 }}
             >
                 <Stack sx={{p: 1}}>
-                    <MenuItem
-                              sx={{color: "#fff", fontSize: "12px !important", fontWeight: "300 !important", px: 1}}>
+                    <MenuItem>
                         ویرایش
                     </MenuItem>
-                    <MenuItem sx={{color: "#fff", fontSize: "12px !important", fontWeight: "300 !important", px: 1}}>
+                    <MenuItem>
                         تغییر کلمه عبور
                     </MenuItem>
-                    <MenuItem onClick={handleLogout}
-                              sx={{color: "#fff", fontSize: "12px !important", fontWeight: "300 !important"}}>
+                    <MenuItem onClick={handleLogout}>
                         خروج
                     </MenuItem>
                 </Stack>
