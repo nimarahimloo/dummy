@@ -33,9 +33,7 @@ export default function MenuPopover({ children, arrow = 'top-right', disabledArr
         sx: {
           p: 1,
           width: "180px",
-          background:"#102852",
           overflow: 'inherit',
-          borderRadius:"10px 0 10px 10px",
           ...sx,
         },
       }}
