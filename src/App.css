@@ -1,0 +1,151 @@
+body {
+    font-weight: normal !important;
+}
+
+:root {
+    --primary: #E2474B;
+    --secondary: #406D96;
+}
+
+.MuiOutlinedInput-root {
+    border-radius: 4px !important;
+}
+
+.MuiButton-root {
+    border-radius: 4px !important;
+}
+
+.MuiInputLabel-root {
+    font-size: 13px !important;
+}
+
+.MuiDrawer-paperAnchorLeft {
+    width: 360px !important;
+}
+
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100%;
+        padding-top: 8em !important;
+    }
+
+    .dropdown {
+        margin-right: 0 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding-top: 40px !important;
+        margin-left: 128px;
+        margin-top: 117px;
+        border-radius: 25px 0 0 0;
+        margin-right: 350px;
+    }
+
+    .dropdown {
+        margin-left: 128px;
+    }
+}
+
+.MuiAvatar-circular {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+
+.MuiOutlinedInput-input {
+    padding: 13.5px 16px !important;
+}
+
+.active {
+    border-radius: 5px !important;
+    font-weight: bold !important;
+}
+
+.btn {
+    transition: all .3s;
+}
+
+.MuiDialog-paperScrollPaper[role="dialog"]{
+    background: #fff !important;
+}
+
+figure {
+    width: 600px;
+    background-repeat: no-repeat;
+}
+
+figure:hover img {
+    opacity: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    background: #000;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    opacity: 0.4;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
