@@ -5,8 +5,8 @@ import {LoadingButton} from "@mui/lab";
 import * as Yup from "yup";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup/dist/yup";
-import {useSnackbar} from "notistack";
 import JalaliDatePicket from "../components/JalaliDatePicket";
+
 
 /**
  * Information Form
@@ -15,7 +15,6 @@ import JalaliDatePicket from "../components/JalaliDatePicket";
  */
 export default function Information() {
     const [birthDate, setBirthDate] = useState(new Date());
-    const {enqueueSnackbar} = useSnackbar();
 
     const CompanySchema = Yup.object().shape({
         first_name: Yup.string(),

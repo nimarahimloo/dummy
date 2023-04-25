@@ -1,13 +1,13 @@
 import React from 'react';
 import AdapterJalali from "@date-io/date-fns-jalali";
-import {MobileDatePicker} from "@mui/x-date-pickers";
-import {InputAdornment, TextField} from "@mui/material";
+import {TextField} from "@mui/material";
 import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
+import {DatePicker} from '@mui/x-date-pickers';
 
-export default function JalaliDatePicket({label , value , setValue , startAdornment}) {
+export default function JalaliDatePicket({label, value, setValue, startAdornment}) {
     return (
         <LocalizationProvider dateAdapter={AdapterJalali}>
-            <MobileDatePicker
+            <DatePicker
                 value={value}
                 label={label}
                 inputFormat="yyyy/MM/dd"
@@ -16,18 +16,13 @@ export default function JalaliDatePicket({label , value , setValue , startAdornm
                 onChange={(newValue) => {
                     setValue(newValue);
                 }}
-                renderInput={({inputRef, inputProps, InputProps}) => (
-                    <>
-                        <TextField {...inputProps} sx={{width:"100%"}} InputProps={{
-                            ...InputProps,
-                            startAdornment: (
-                                <InputAdornment position="start">{startAdornment}
-                                </InputAdornment>
-                            ),
-                        }}/>
-                        {InputProps?.endAdornment}
-                    </>
-                )}
+                slotProps={{
+                    textField: {
+                        helperText: 'MM/DD/YYYY',
+                    },
+                }}
+                renderInput={(params) => <TextField {...params}  sx={{width:"100%"}} />}
+
             />
         </LocalizationProvider>
     );

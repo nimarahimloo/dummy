@@ -20,7 +20,6 @@ import HomeSlider from "../sections/HomeSlider";
  */
 
 export default function Dashboard() {
-
     return (
         <Page title="داشبورد">
             <Container maxWidth="xl">
